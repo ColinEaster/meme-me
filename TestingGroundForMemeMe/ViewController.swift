@@ -18,17 +18,15 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     var topTextField: UITextField!
+    var bottomTextField: UITextField!
     
-    let topTextFieldWidth = 200.00
+    let topTextFieldWidth = 300.00
     let topTextFieldHeight = 40.00
     let memeTextFieldDelegate = MemeTextFieldDelegate()
     
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        topTextField = UITextField(frame: CGRect(x: 100, y: 240, width: topTextFieldWidth, height: topTextFieldHeight));
-        standardizeTextFieldSettings(topTextField, aString: "TopText")
-        self.view.addSubview(topTextField)
-        topTextField.text = "alkdjflaksjdf"
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +58,10 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         imageView.image = image
         
         self.dismissViewControllerAnimated(true, completion: nil)
+        topTextField = UITextField(frame: CGRect(x: 40, y: 240, width: topTextFieldWidth, height: topTextFieldHeight));
+        standardizeTextFieldSettings(topTextField, aString: "TopText")
+        self.view.addSubview(topTextField)
+
     }
     
     // Called after the user hits cancel in the image picker
@@ -81,9 +83,23 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         aTextField.textAlignment = NSTextAlignment.Center
         aTextField.clearsOnBeginEditing = true
        // aTextField.delegate = memeTextFieldDelegate
-    
+        aTextField.delegate = self
+    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+       
+        if (textField.text == "TopText" || textField.text == "BottomText") {
+            println("should be clearing   \(textField.text)")
+            textField.text = ""
+            
+            println("next is \(textField.text)")
+        }
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
         
 }
 
