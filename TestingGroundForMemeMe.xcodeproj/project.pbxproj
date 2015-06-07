@@ -13,6 +13,7 @@
 		3B0F4C071B22396D00947414 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F4C061B22396D00947414 /* Images.xcassets */; };
 		3B0F4C0A1B22396D00947414 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F4C081B22396D00947414 /* LaunchScreen.xib */; };
 		3B0F4C161B22396D00947414 /* TestingGroundForMemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F4C151B22396D00947414 /* TestingGroundForMemeMeTests.swift */; };
+		3B0F4C201B238E9700947414 /* MemeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F4C1F1B238E9700947414 /* MemeTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		3B0F4C0F1B22396D00947414 /* TestingGroundForMemeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingGroundForMemeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0F4C141B22396D00947414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0F4C151B22396D00947414 /* TestingGroundForMemeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingGroundForMemeMeTests.swift; sourceTree = "<group>"; };
+		3B0F4C1F1B238E9700947414 /* MemeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				3B0F4BFF1B22396D00947414 /* AppDelegate.swift */,
 				3B0F4C011B22396D00947414 /* ViewController.swift */,
+				3B0F4C1F1B238E9700947414 /* MemeTextFieldDelegate.swift */,
 				3B0F4C031B22396D00947414 /* Main.storyboard */,
 				3B0F4C061B22396D00947414 /* Images.xcassets */,
 				3B0F4C081B22396D00947414 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0F4C021B22396D00947414 /* ViewController.swift in Sources */,
+				3B0F4C201B238E9700947414 /* MemeTextFieldDelegate.swift in Sources */,
 				3B0F4C001B22396D00947414 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

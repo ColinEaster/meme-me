@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -17,8 +17,17 @@ UINavigationControllerDelegate {
     
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
+    var topTextField: UITextField!
+    
+    let topTextFieldWidth = 200.00
+    let topTextFieldHeight = 40.00
+    let memeTextFieldDelegate = MemeTextFieldDelegate()
+    
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        topTextField = UITextField(frame: CGRect(x: 100, y: 240, width: topTextFieldWidth, height: topTextFieldHeight));
+        standardizeTextFieldSettings(topTextField, aString: "TopTextField")
+        self.view.addSubview(topTextField)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,5 +71,16 @@ UINavigationControllerDelegate {
         imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
+    // format the text field (white text, centered, etc) and change the text to a given string
+    func standardizeTextFieldSettings(aTextField: UITextField, aString: String) {
+        aTextField.delegate = memeTextFieldDelegate
+        aTextField.textColor = UIColor.whiteColor()
+        aTextField.text = aString
+        aTextField.textAlignment = NSTextAlignment.Center
+        
+    
+    }
+    
+        
 }
 
