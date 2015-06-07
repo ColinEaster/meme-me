@@ -13,11 +13,15 @@ class MemeTextFieldDelegate: NSObject, UITextFieldDelegate  {
     
     func textFieldDidBeginEditing(textField: UITextField) {
         if (textField.text == "TopText" || textField.text == "BottomText") {
+            println("should be clearing   \(textField.text)")
             textField.text = ""
+        
+            println("next is \(textField.text)")
         }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 

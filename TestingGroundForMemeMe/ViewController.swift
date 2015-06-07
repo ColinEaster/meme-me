@@ -26,12 +26,14 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         topTextField = UITextField(frame: CGRect(x: 100, y: 240, width: topTextFieldWidth, height: topTextFieldHeight));
-        standardizeTextFieldSettings(topTextField, aString: "TopTextField")
+        standardizeTextFieldSettings(topTextField, aString: "TopText")
         self.view.addSubview(topTextField)
+        topTextField.text = "alkdjflaksjdf"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,11 +75,12 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
     // format the text field (white text, centered, etc) and change the text to a given string
     func standardizeTextFieldSettings(aTextField: UITextField, aString: String) {
-        aTextField.delegate = memeTextFieldDelegate
+        
         aTextField.textColor = UIColor.whiteColor()
         aTextField.text = aString
         aTextField.textAlignment = NSTextAlignment.Center
-        
+        aTextField.clearsOnBeginEditing = true
+       // aTextField.delegate = memeTextFieldDelegate
     
     }
     

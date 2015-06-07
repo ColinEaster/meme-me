@@ -35,32 +35,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" placeholder="Bottom" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="J96-dW-hF2">
-                                <rect key="frame" x="111" y="314" width="362" height="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" placeholder="Top" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="HBQ-KN-5tL">
-                                <rect key="frame" x="111" y="150" width="362" height="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DCp-NE-aoH" firstAttribute="centerY" secondItem="J96-dW-hF2" secondAttribute="centerY" constant="-80" id="2hw-B9-3JV"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4bF-Cm-amg" secondAttribute="bottom" id="Nz8-R0-P7N"/>
                             <constraint firstItem="DCp-NE-aoH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="SFn-28-g95"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4bF-Cm-amg" secondAttribute="trailing" id="TgI-A2-Hhe"/>
-                            <constraint firstItem="HBQ-KN-5tL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="U1L-Iu-ChW"/>
-                            <constraint firstItem="J96-dW-hF2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="b4T-Oi-iFl"/>
                             <constraint firstItem="4bF-Cm-amg" firstAttribute="top" secondItem="DCp-NE-aoH" secondAttribute="bottom" constant="50" id="bIs-HS-kdN"/>
                             <constraint firstItem="4bF-Cm-amg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="f4G-2O-GJx"/>
                             <constraint firstItem="DCp-NE-aoH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="ftg-E1-MJD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DCp-NE-aoH" secondAttribute="trailing" constant="20" id="ggZ-kO-Jlu"/>
-                            <constraint firstItem="DCp-NE-aoH" firstAttribute="centerY" secondItem="HBQ-KN-5tL" secondAttribute="centerY" constant="84" id="jnC-ge-fqo"/>
                         </constraints>
                     </view>
                     <connections>
