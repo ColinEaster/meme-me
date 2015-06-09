@@ -27,7 +27,6 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     let memeTextFieldDelegate = MemeTextFieldDelegate()
     
     var meme: Meme!
-    //var memedImage: UIImage!
     
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
@@ -82,7 +81,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         self.view.addSubview(bottomTextField)
         
         shareButton.enabled = true
-        println(" \(shareButton.enabled)")
+        
         }
     
     // Called after the user hits cancel in the image picker
