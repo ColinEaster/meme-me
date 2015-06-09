@@ -32,17 +32,30 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-2G-vV2">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9yF-Wi-fzY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4bF-Cm-amg" secondAttribute="bottom" id="Nz8-R0-P7N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4bF-Cm-amg" secondAttribute="trailing" id="TgI-A2-Hhe"/>
+                            <constraint firstItem="MlL-2G-vV2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Yep-zx-pG9"/>
                             <constraint firstItem="4bF-Cm-amg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="f4G-2O-GJx"/>
+                            <constraint firstItem="MlL-2G-vV2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="sVO-ae-O0I"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="KYe-0n-BSf" id="N5k-4j-o0a"/>
                         <outlet property="imagePickerButton" destination="4bF-Cm-amg" id="wB1-qg-AjR"/>
+                        <outlet property="shareButton" destination="MlL-2G-vV2" id="4gz-Yi-3zd"/>
+                        <outlet property="toolBar" destination="4bF-Cm-amg" id="Xfs-az-Iwp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
